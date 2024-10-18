@@ -108,6 +108,31 @@ Quarter-on-quarter sales growth:
              DIVIDE([Total Sales] - SalesLastQtr, SalesLastQtr)
 
 
+------
+     Win Rate =
+     // Wins = CALCULATE(COUNT([opportunity_id]), sales_pipeline[deal_stage]="Won")
+     VAR Losses =
+         CALCULATE(COUNT([opportunity_id]), sales_pipeline[deal_stage]="Lost")
+     RETURN
+         DIVIDE([Wins], [Wins] + Losses)
+----
+    Avg Sale Value = 
+    CALCULATE(
+        AVERAGE( sales_pipeline[close_value]),
+        sales_pipeline[deal_stage] = "Won"
+        
+  ------
+       Average Days to Close = 
+     AVERAGEX(
+         FILTER(
+             sales_pipeline,
+             NOT(ISBLANK([close_date])) && NOT(ISBLANK([engage_date]))
+         ),
+         [close_date] - [engage_date]
+     )
+
+
+        
 
 
 
