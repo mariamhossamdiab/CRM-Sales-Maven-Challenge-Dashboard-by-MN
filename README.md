@@ -59,6 +59,8 @@ o	Table of accounts with total sales and number of sales
 •	Performance by Team - This page allows managers to track their performance compared to other teams and company average. This page will contain sales, win rates, average sale value, and average days to close by manager.
 # Power BI Data Modeling
 •	A calendar table was created to enable time series analysis such as quarter-on-quarter growth. Table relationships were set such that all dimension tables (accounts, products, sales_teams) and the calendar table filters the sales_pipeline table through a one-to-many relationship. The calendar table uses close_date as the active relationship and engage_date as an inactive relationship. The resulting data model looks like this:
+![image](https://github.com/user-attachments/assets/5fa3a2dd-a366-4621-80f4-ef72571e78d4)
+
  
 The following measures were created to calculate key performance indicators (KPIs) for use in the dashboard:
 •	Total sales, quarter-on-quarter (QoQ) sales growth, company average
@@ -76,7 +78,10 @@ Quarter-on-quarter sales growth:
 
 # Power BI Dashboard Building
 The dashboard was built according to the dashboard plan mentioned above. Slicers for manager name, year, and quarter were added to filter the data and were also synchronized across pages.
+
 The Dashboard page displays quarterly KPIs for the team. Clicking on a sales agent's name filters the data to show KPIs specific to the selected sales agent. Clicking column headers in the table sorts the rows by the selected metric. Lastly, clicking on the "Click to see details" button navigates to the Sales Opportunities page. 
+![image](https://github.com/user-attachments/assets/5c530abf-6a24-492c-95ca-7d8fb00a1174)
+
 The Sales Opportunities page contains details of engaged opportunities with their respective potential sale value. A slicer was created to filter the table by a sales agent.
 The Sales Over Time page displays sales and winr ates by quarter. Clicking a data point highlights the page by quarter. A total sales by sales agent chart can be used to filter sales over time chart by the selected agent. Finally, a table of the top 5 biggest wins can also be filtered by quarter and/or by sales agent.
  
