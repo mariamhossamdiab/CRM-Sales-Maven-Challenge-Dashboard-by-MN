@@ -37,26 +37,48 @@ Common Issues Detected:
 As the audience of the dashboard is sales team managers who may not be proficient with Power BI reports, the dashboard should be optimized for ease of use, requiring minimal training for its users.
 The report will be split into five pages:
     •	Dashboard - This page enables team managers to quickly track overall team performance as well as the performance of each sales agent. This page will contain the following visuals:
+    
     o	KPI cards with sub-cards that provide context to the metric values.
+    
     o	Total sales: current, quarter-on-quarter (QoQ) growth, company average
+    
     o	Wins (number of successful sales): current, last quarter, company average
+    
     o	Average sale value: current, QoQ growth, company average
+    
     o	Average days to close a deal: current, last quarter, company average.
+    
     o	Number of engaged opportunities: number, potential sales
+    
     •	Total sales by salesperson with company average as reference line: This enables managers to quickly assess how each sales agent performs compared to the company average.
+    
     o	Table of sales, wins, win rates, average sales value, and average days to close for each sale agent.
+    
     •	Sales opportunities - provides a detailed table of currently engaging opportunities. This enables managers to identify potential sales.
+    
     •	Sales over time - This page keeps track of sales performance over time. This page will contain the following charts:
+    
     o	Line chart of total sales and win rates by quarter.
+    
     o	Total sales by salesperson - this can be used to cross-filter other charts on the page.
+    
     o	Top 5 biggest wins - top 5 won opportunities with the highest sale value for the given quarter.
+    
     •	Sales by region - This page keeps track of sales by location, industry, and product category, allowing managers to identify market trends. This page will contain the following charts:
+    
     o	 map of sales by location
+    
     o	Sales by industry
+    
     o	Sales by product
+    
     o	Win rates by product.
+    
     o	Table of accounts with total sales and number of sales
-    •	Performance by Team - This page allows managers to track their performance compared to other teams and company average. This page will contain sales, win rates, average sale value, and average days to close by manager.
+    
+    •	Performance by Team - This page allows managers to track their performance compared to other teams and company average. This page will contain sales, win rates, average sale value, and average days to 
+    
+    close by manager.
 # Power BI Data Modeling
 •	A calendar table was created to enable time series analysis such as quarter-on-quarter growth. Table relationships were set such that all dimension tables (accounts, products, sales_teams) and the calendar table filters the sales_pipeline table through a one-to-many relationship. The calendar table uses close_date as the active relationship and engage_date as an inactive relationship. The resulting data model looks like this:
 ![image](https://github.com/user-attachments/assets/5fa3a2dd-a366-4621-80f4-ef72571e78d4)
