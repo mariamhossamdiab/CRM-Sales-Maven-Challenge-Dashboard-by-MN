@@ -83,11 +83,19 @@ The Dashboard page displays quarterly KPIs for the team. Clicking on a sales age
 ![image](https://github.com/user-attachments/assets/5c530abf-6a24-492c-95ca-7d8fb00a1174)
 
 The Sales Opportunities page contains details of engaged opportunities with their respective potential sale value. A slicer was created to filter the table by a sales agent.
+![image](https://github.com/user-attachments/assets/84bb58b4-399b-4066-b9fd-8c37fc7f4954)
+
 The Sales Over Time page displays sales and winr ates by quarter. Clicking a data point highlights the page by quarter. A total sales by sales agent chart can be used to filter sales over time chart by the selected agent. Finally, a table of the top 5 biggest wins can also be filtered by quarter and/or by sales agent.
+![image](https://github.com/user-attachments/assets/58092354-176c-48a2-b208-9671a4757181)
+
  
 The Sales by Region page has a choropleth map of total sales by country, total sales by industry, total sales and win rates by product, and accounts table, all of which can be used to cross-highlight visuals on the page.
+![image](https://github.com/user-attachments/assets/3ea288ff-9e71-46d2-9862-16fd47fca913)
+
  
 Finally, the performance by team has charts that visualize a manager's performance relative to other teams and with company average as reference lines.
+![image](https://github.com/user-attachments/assets/050abe58-583e-4fe8-9546-56dad0814ecb)
+
 # Conclusion
 An interactive dashboard plays a key role for stakeholders to track business performance and make timely data-driven decisions. SQL can be used to profile, clean and explore the data to prepare for dashboard development.
 
