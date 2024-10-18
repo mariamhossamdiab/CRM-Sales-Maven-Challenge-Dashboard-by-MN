@@ -1,5 +1,5 @@
 # CRM-Sales-Maven-Challenge-Dashboard-by-MN 
-Introduction
+# Introduction
 
 Project Objective
 The Quarterly Sales Performance Dashboard is designed to monitor sales performance over time, providing detailed insights into sales agents activities and outcomes across multiple quarters. The dashboard highlights opportunities won and lost, agent performance, and overall sales trends.
@@ -25,7 +25,7 @@ The dataset contains four tables:
 •	products - Details of products offered including product name, series, and sale price.
 •	sales_pipeline - Records of sales opportunities with details including sales agent, product name, company name, sales pipeline stage, date of first engagement, date of closing a deal, and revenue.
 •	sales_teams - Details of each sales agent including name, name of manager, and regional office.
-Data Cleaning 
+# Data Cleaning 
 Common Issues Detected:
 •	Missing Data
 •	Errors
@@ -33,7 +33,7 @@ Common Issues Detected:
 •	Data Type Mismatches: Certain columns may have incorrect data types (e.g., times stored as text).
 
 
-Dashboard Planning
+# Dashboard Planning
 As the audience of the dashboard is sales team managers who may not be proficient with Power BI reports, the dashboard should be optimized for ease of use, requiring minimal training for its users.
 The report will be split into five pages:
 •	Dashboard - This page enables team managers to quickly track overall team performance as well as the performance of each sales agent. This page will contain the following visuals:
@@ -57,7 +57,7 @@ o	Sales by product
 o	Win rates by product.
 o	Table of accounts with total sales and number of sales
 •	Performance by Team - This page allows managers to track their performance compared to other teams and company average. This page will contain sales, win rates, average sale value, and average days to close by manager.
-Power BI Data Modeling
+# Power BI Data Modeling
 •	A calendar table was created to enable time series analysis such as quarter-on-quarter growth. Table relationships were set such that all dimension tables (accounts, products, sales_teams) and the calendar table filters the sales_pipeline table through a one-to-many relationship. The calendar table uses close_date as the active relationship and engage_date as an inactive relationship. The resulting data model looks like this:
  
 The following measures were created to calculate key performance indicators (KPIs) for use in the dashboard:
@@ -74,18 +74,15 @@ Quarter-on-quarter sales growth:
 
 
 
-Power BI Dashboard Building
+# Power BI Dashboard Building
 The dashboard was built according to the dashboard plan mentioned above. Slicers for manager name, year, and quarter were added to filter the data and were also synchronized across pages.
 The Dashboard page displays quarterly KPIs for the team. Clicking on a sales agent's name filters the data to show KPIs specific to the selected sales agent. Clicking column headers in the table sorts the rows by the selected metric. Lastly, clicking on the "Click to see details" button navigates to the Sales Opportunities page. 
-
 The Sales Opportunities page contains details of engaged opportunities with their respective potential sale value. A slicer was created to filter the table by a sales agent.
- 
-
 The Sales Over Time page displays sales and winr ates by quarter. Clicking a data point highlights the page by quarter. A total sales by sales agent chart can be used to filter sales over time chart by the selected agent. Finally, a table of the top 5 biggest wins can also be filtered by quarter and/or by sales agent.
  
 The Sales by Region page has a choropleth map of total sales by country, total sales by industry, total sales and win rates by product, and accounts table, all of which can be used to cross-highlight visuals on the page.
  
 Finally, the performance by team has charts that visualize a manager's performance relative to other teams and with company average as reference lines.
-Conclusion
+# Conclusion
 An interactive dashboard plays a key role for stakeholders to track business performance and make timely data-driven decisions. SQL can be used to profile, clean and explore the data to prepare for dashboard development.
 
