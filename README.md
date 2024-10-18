@@ -95,6 +95,19 @@ The following measures were created to calculate key performance indicators (KPI
 
 The following DAX codes were used for some of the measures:
 Quarter-on-quarter sales growth:
+         QoQ Sales Growth =
+         
+         VAR SalesLastQtr =
+             CALCULATE(
+             
+                 [Total Sales],
+                 DATEADD('Calendar'[Date], -1, QUARTER)
+             )
+             
+         RETURN
+             DIVIDE([Total Sales] - SalesLastQtr, SalesLastQtr)
+
+
 
 
 
