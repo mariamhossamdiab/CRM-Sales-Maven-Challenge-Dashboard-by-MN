@@ -150,7 +150,8 @@ The Sales Over Time page displays sales and winr ates by quarter. Clicking a dat
 
  
 The Sales by Region page has a choropleth map of total sales by country, total sales by industry, total sales and win rates by product, and accounts table, all of which can be used to cross-highlight visuals on the page.
-![image](https://github.com/user-attachments/assets/3ea288ff-9e71-46d2-9862-16fd47fca913)
+![Sales by Region](https://github.com/user-attachments/assets/b1fd2615-ff29-4287-bc72-af7d6d00b785)
+
 
  
 Finally, the performance by team has charts that visualize a manager's performance relative to other teams and with company average as reference lines.
